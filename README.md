@@ -15,7 +15,7 @@ Website der **Afrikanischen Community in Dortmund (ACoD)** und ein Baukasten, mi
 1. Repository auf GitHub öffnen → **Settings** → **Pages**
 2. Unter *Build and deployment*: Source **Deploy from a branch**, Branch **main**, Ordner **/docs** → **Save**
 3. Nach etwa einer Minute ist die Seite erreichbar unter
-   `https://<benutzername>.github.io/<repository>/` und der Baukasten unter `…/baukasten/`
+   `https://wabble1508-dotcom.github.io/acod/` und der Baukasten unter `…/baukasten/`
 
 ## Website-Baukasten
 
