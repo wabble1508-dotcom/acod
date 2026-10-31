@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spenden · ACoD Dortmund</title>
+<meta name="description" content="Spenden für ACoD e.V.: Beratung, Bildung und Begegnung in Dortmund unterstützen.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a href="termine.html">Termine</a><a href="mitmachen.html#mitglied">Mitglied werden</a><a href="kontakt.html">Kontakt</a>
+  <a href="https://www.facebook.com/ACoD2020/" target="_blank" rel="noopener">Facebook</a>
+</div></div>
+<header class="site"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="ACoD Startseite">
+    <span class="wordmark" aria-hidden="true">AC<span class="o-check">o<svg viewBox="0 0 40 40"><path d="M6 21 L16 31 L36 6"/></svg></span>D</span>
+    <span class="logo-text">Afrikanische Community<br>in Dortmund</span>
+  </a>
+  <nav class="main" id="nav" aria-label="Hauptmenü"><ul><li><a href="index.html">Start</a></li><li class="has-sub"><a href="ueber-uns.html">Über uns</a><ul class="sub"><li><a href="ueber-uns.html">Verein &amp; Geschichte</a></li><li><a href="vorstand.html">Vorstand &amp; Team</a></li><li><a href="transparenz.html">Finanzen &amp; Transparenz</a></li></ul></li><li><a href="integrationsrat.html">Integrationsrat</a></li><li class="has-sub"><a href="projekte.html">Projekte</a><ul class="sub"><li><a href="projekte.html#laufend">Laufende Projekte</a></li><li><a href="projekte.html#abgeschlossen">Abgeschlossene Projekte</a></li><li><a href="projekte.html">Alle Projekte</a></li></ul></li><li class="has-sub"><a href="aktuelles.html">Aktuelles</a><ul class="sub"><li><a href="aktuelles.html">Neuigkeiten</a></li><li><a href="termine.html">Termine</a></li><li><a href="galerie.html">Bilder &amp; Videos</a></li></ul></li><li class="has-sub"><a href="mitmachen.html">Mitmachen</a><ul class="sub"><li><a href="mitmachen.html#mitglied">Mitglied werden</a></li><li><a href="mitmachen.html#ehrenamt">Ehrenamt</a></li><li><a href="mitmachen.html#kooperation">Kooperationen</a></li></ul></li><li><a href="kontakt.html">Kontakt</a></li></ul></nav>
+  <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav">Menü</button>
+  <a class="btn btn-donate" href="spenden.html">Spenden</a>
+</div></header>
+<div class="pattern" aria-hidden="true"></div>
+<div class="notice"><div class="wrap">Entwurf: Texte, Zahlen, Namen und Bankdaten sind Platzhalter und müssen vom Verein ersetzt werden.</div></div>
+<main id="inhalt">
+<div class="page-head"><div class="wrap">
+  <nav class="crumbs" aria-label="Pfad"><a href="index.html">Start</a> / Spenden</nav>
+  <p class="eyebrow">Spenden</p>
+  <h1>Ihre Spende wirkt in Dortmund.</h1>
+  <p class="lead">Mit einer einmaligen oder monatlichen Spende sichern Sie Beratung, Bildung und Begegnung für Familien afrikanischer Herkunft.</p>
+</div></div>
+<div class="donate-band"><div class="wrap donate-grid">
+  <div class="stack" style="gap:1.2rem">
+    <h2>Was Ihre Spende bewirkt</h2>
+    <ul class="uses">
+  <li><b>25 €</b><span>finanzieren eine Woche Hausaufgabenhilfe für ein Kind</span></li>
+  <li><b>50 €</b><span>decken Material für einen Sprach- und Bewerbungsworkshop</span></li>
+  <li><b>120 €</b><span>ermöglichen einen Begegnungsabend für 40 Gäste</span></li>
+</ul>
+    <h3>Per Überweisung</h3>
+    <dl class="bank">
+      <dt>Empfänger</dt><dd>Afrikanische Community in Dortmund e.V.</dd>
+      <dt>IBAN</dt><dd><span id="iban">DE00 0000 0000 0000 0000 00</span><button class="copy" type="button" data-copy="iban">Kopieren</button></dd>
+      <dt>BIC · Bank</dt><dd>XXXXDEXXXXX · Bank (Platzhalter)</dd>
+      <dt>Verwendungszweck</dt><dd>Spende + Ihre Adresse für die Zuwendungsbestätigung</dd>
+    </dl>
+  </div>
+  <form class="form" id="donateForm" novalidate>
+    <h3>Online spenden</h3>
+    <div class="seg" role="radiogroup" aria-label="Spendenrhythmus">
+      <input type="radio" name="rhythm" id="r-once" value="einmalig" checked><label for="r-once">Einmalig</label>
+      <input type="radio" name="rhythm" id="r-month" value="monatlich"><label for="r-month">Monatlich</label>
+    </div>
+    <div class="amounts" role="radiogroup" aria-label="Betrag">
+      <input type="radio" name="amount" id="a25" value="25"><label for="a25">25 €</label>
+      <input type="radio" name="amount" id="a50" value="50" checked><label for="a50">50 €</label>
+      <input type="radio" name="amount" id="a120" value="120"><label for="a120">120 €</label>
+      <input type="radio" name="amount" id="a250" value="250"><label for="a250">250 €</label>
+    </div>
+    <div class="field"><label for="custom">Anderer Betrag (€)</label><input id="custom" type="number" min="1" step="1" inputmode="numeric" placeholder="z. B. 30"></div>
+    <div class="field"><label for="purpose">Wofür?</label>
+      <select id="purpose"><option>Wo es am nötigsten ist</option><option>Lernbrücke</option><option>Willkommenslotsen</option><option>Afrika-Tag Dortmund</option></select>
+    </div>
+    <p class="impact" id="impact"></p>
+    <button class="btn btn-donate" type="submit">Spende abschließen</button>
+    <p class="form-msg" id="donateMsg" hidden></p>
+  </form>
+</div></div>
+<div class="wrap"><div class="section">
+  <h2>Häufige Fragen</h2>
+  <div class="faq">
+    <details><summary>Bekomme ich eine Spendenquittung?</summary><p>Ja. Für Spenden bis 300 € genügt dem Finanzamt Ihr Kontoauszug. Für höhere Beträge schicken wir Ihnen Anfang des Folgejahres automatisch eine Zuwendungsbestätigung, wenn Sie Ihre Adresse angeben.</p></details>
+    <details><summary>Kann ich für ein bestimmtes Projekt spenden?</summary><p>Ja. Geben Sie im Verwendungszweck den Projektnamen an oder wählen Sie das Projekt im Formular. Zweckgebundene Spenden setzen wir nur für dieses Projekt ein.</p></details>
+    <details><summary>Wie viel meiner Spende kommt an?</summary><p>Der Vorstand arbeitet ehrenamtlich. Über 80 % unserer Ausgaben fließen direkt in Projekte. Details finden Sie unter <a href="transparenz.html">Finanzen &amp; Transparenz</a>.</p></details>
+    <details><summary>Kann ich auch Sachspenden geben?</summary><p>Gern, vor allem Schulmaterial, Kinderbücher und Laptops. Bitte sprechen Sie uns vorher an, damit wir planen können.</p></details>
+  </div>
+</div></div>
+</main>
+<div class="pattern" aria-hidden="true"></div>
+<footer>
+  <div class="wrap grid">
+    <div class="stack" style="gap:.6rem">
+      <h3>ACoD e.V.</h3>
+      <p>Afrikanische Community in Dortmund e.V.<br>Musterstraße 1, 44135 Dortmund<br>info@acod-dortmund.de</p>
+      <p>Spendenkonto: DE00 0000 0000 0000 0000 00</p>
+    </div>
+    <div><h3>Verein</h3><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="vorstand.html">Vorstand &amp; Team</a></li><li><a href="transparenz.html">Finanzen &amp; Transparenz</a></li><li><a href="aktuelles.html">Aktuelles</a></li><li><a href="termine.html">Termine</a></li></ul></div>
+    <div><h3>Projekte</h3><ul><li><a href="projekte.html#laufend">Laufende Projekte</a></li><li><a href="projekte.html#abgeschlossen">Abgeschlossene Projekte</a></li><li><a href="projekt-lernbruecke.html">Lernbrücke</a></li><li><a href="projekt-willkommenslotsen.html">Willkommenslotsen</a></li><li><a href="projekt-afrika-tag.html">Afrika-Tag Dortmund</a></li></ul></div>
+    <div><h3>Unterstützen</h3><ul><li><a href="spenden.html">Spenden</a></li><li><a href="mitmachen.html#mitglied">Mitglied werden</a></li><li><a href="mitmachen.html#ehrenamt">Ehrenamt</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="https://www.facebook.com/ACoD2020/" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+  </div>
+  <div class="legal"><div class="wrap"><span>© 2026 Afrikanische Community in Dortmund e.V.</span><span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span></div></div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

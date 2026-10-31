@@ -1,0 +1,238 @@
+<div class="app" id="app">
+  <header class="bar">
+    <div class="bk-brand"><span class="bk-mark" aria-hidden="true"></span><b>Baukasten</b></div>
+    <label class="sr" for="projName">Projektname</label>
+    <input id="projName" class="proj-name" autocomplete="off">
+    <span class="save-state" id="saveState">Bereit</span>
+    <div class="bar-right">
+      <div class="mode-switch" role="group" aria-label="Ansicht">
+        <button type="button" data-mode="edit" aria-pressed="true">Bearbeiten</button>
+        <button type="button" data-mode="preview" aria-pressed="false">Vorschau</button>
+      </div>
+      <label class="sr" for="pageSelect">Seite in der Vorschau</label>
+      <select id="pageSelect"></select>
+      <div class="devices" role="group" aria-label="Gerät">
+        <button type="button" data-dev="desktop" aria-pressed="true" title="Desktop">Desktop</button>
+        <button type="button" data-dev="tablet" aria-pressed="false" title="Tablet">Tablet</button>
+        <button type="button" data-dev="phone" aria-pressed="false" title="Handy">Handy</button>
+      </div>
+      <button type="button" class="btn primary" id="exportZip">Website exportieren</button>
+    </div>
+  </header>
+
+  <div class="main" data-view="edit">
+    <aside class="side">
+      <nav class="tabs" role="tablist" aria-label="Bereiche">
+        <button role="tab" data-tab="projekt" aria-selected="true">Projekt</button>
+        <button role="tab" data-tab="marke" aria-selected="false">Logo &amp; Stil</button>
+        <button role="tab" data-tab="seiten" aria-selected="false">Seiten</button>
+        <button role="tab" data-tab="ki" aria-selected="false">KI</button>
+        <button role="tab" data-tab="auto" aria-selected="false">Automatisierung</button>
+      </nav>
+
+      <!-- PROJEKT -->
+      <section class="panel" data-panel="projekt">
+        <div class="group">
+          <h2>Meine Projekte</h2>
+          <ul class="proj-list" id="projList"></ul>
+          <p class="hint" id="storeHint"></p>
+        </div>
+        <div class="group">
+          <h2>Neues Projekt</h2>
+          <div class="field"><label for="newName">Name der Website</label><input id="newName" placeholder="z. B. Physio Rossa"></div>
+          <div class="field"><label for="newType">Art</label>
+            <select id="newType">
+              <option value="verein">Verein / Initiative</option>
+              <option value="praxis">Praxis / Gesundheit</option>
+              <option value="handwerk">Handwerk / Dienstleistung</option>
+              <option value="gastro">Restaurant / Café</option>
+              <option value="agentur">Agentur / Selbstständig</option>
+              <option value="event">Event / Kampagne (Landingpage)</option>
+              <option value="leer">Leeres Projekt</option>
+            </select></div>
+          <div class="field"><label for="newDesc">Kurzbeschreibung (optional)</label><textarea id="newDesc" rows="3" placeholder="Was macht ihr, für wen, wo?"></textarea></div>
+          <button type="button" class="btn primary" id="createProj">Projekt aus Vorlage anlegen</button>
+          <p class="hint">Mit dem Tab „KI“ kann Claude die Seiten anschließend aus deiner Beschreibung schreiben.</p>
+        </div>
+        <div class="group">
+          <h2>Website-Angaben</h2>
+          <div class="field"><label for="siteName">Name</label><input id="siteName" data-site="name"></div>
+          <div class="field"><label for="siteTagline">Untertitel</label><input id="siteTagline" data-site="tagline"></div>
+          <div class="row2">
+            <div class="field"><label for="siteEmail">E-Mail</label><input id="siteEmail" data-site="email"></div>
+            <div class="field"><label for="sitePhone">Telefon</label><input id="sitePhone" data-site="phone"></div>
+          </div>
+          <div class="field"><label for="siteAddress">Adresse</label><input id="siteAddress" data-site="address"></div>
+          <div class="row2">
+            <div class="field"><label for="siteCtaLabel">Button oben rechts</label><input id="siteCtaLabel" data-site="ctaLabel" placeholder="z. B. Spenden"></div>
+            <div class="field"><label for="siteCtaLink">Ziel</label><input id="siteCtaLink" data-site="ctaLink" list="pageSlugs" placeholder="z. B. spenden"></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="siteFacebook">Facebook</label><input id="siteFacebook" data-site="facebook" placeholder="https://"></div>
+            <div class="field"><label for="siteInstagram">Instagram</label><input id="siteInstagram" data-site="instagram" placeholder="https://"></div>
+          </div>
+          <div class="field"><label for="siteDomain">Domain (für Sitemap)</label><input id="siteDomain" data-site="domain" placeholder="https://www.beispiel.de"></div>
+          <div class="field"><label for="siteNotice">Hinweisleiste (leer = aus)</label><input id="siteNotice" data-site="notice"></div>
+        </div>
+        <div class="group">
+          <h2>Sichern &amp; übertragen</h2>
+          <div class="btn-row">
+            <button type="button" class="btn" id="exportJson">Projektdatei speichern</button>
+            <label class="btn" for="importJson">Projektdatei laden</label>
+            <input type="file" id="importJson" accept=".json,application/json" hidden>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARKE -->
+      <section class="panel" data-panel="marke" hidden>
+        <div class="group">
+          <h2>Logo</h2>
+          <div class="logo-drop" id="logoDrop" tabindex="0" role="button" aria-label="Logo hochladen">
+            <img id="logoPreview" alt="" hidden>
+            <span id="logoEmpty">Logo hierher ziehen oder klicken<br><small>PNG, JPG oder SVG</small></span>
+          </div>
+          <input type="file" id="logoFile" accept="image/*" hidden>
+          <div class="btn-row">
+            <button type="button" class="btn" id="logoColors">Farben aus Logo übernehmen</button>
+            <button type="button" class="btn" id="logoAI" hidden>Logo mit Claude analysieren</button>
+            <button type="button" class="btn ghost" id="logoRemove">Entfernen</button>
+          </div>
+          <label class="check"><input type="checkbox" id="showName" data-brand="showName"> Namen neben dem Logo zeigen</label>
+          <p class="hint" id="logoHint">Beim Hochladen liest der Baukasten die Farben aus dem Logo und färbt die Website passend ein.</p>
+          <div class="swatches" id="logoSwatches"></div>
+        </div>
+        <div class="group">
+          <h2>Farben</h2>
+          <div class="colors">
+            <div class="color"><input type="color" id="cPrimary" data-color="primary"><label for="cPrimary">Hauptfarbe<small>Links, Überschriften</small></label></div>
+            <div class="color"><input type="color" id="cAccent" data-color="accent"><label for="cAccent">Akzent<small>Buttons, Hervorhebungen</small></label></div>
+            <div class="color"><input type="color" id="cDark" data-color="dark"><label for="cDark">Dunkel<small>Kopfbereich, Fußzeile</small></label></div>
+          </div>
+          <p class="contrast" id="contrastNote"></p>
+        </div>
+        <div class="group">
+          <h2>Stil</h2>
+          <div class="field"><label for="fontSel">Schriften</label><select id="fontSel" data-brand="font"></select></div>
+          <div class="row2">
+            <div class="field"><label for="heroSel">Einstieg</label><select id="heroSel" data-brand="hero"><option value="dark">Dunkel</option><option value="primary">Hauptfarbe</option><option value="light">Hell</option></select></div>
+            <div class="field"><label for="radiusSel">Ecken</label><select id="radiusSel" data-brand="radius"><option value="2">Eckig</option><option value="10">Weich</option><option value="22">Rund</option></select></div>
+          </div>
+          <div class="field"><label for="bgSel">Hintergrund</label><select id="bgSel" data-brand="bg"><option value="tint">Leicht getönt</option><option value="white">Weiß</option></select></div>
+        </div>
+      </section>
+
+      <!-- SEITEN -->
+      <section class="panel" data-panel="seiten" hidden>
+        <div class="group">
+          <h2>Seiten</h2>
+          <ul class="page-list" id="pageList"></ul>
+          <div class="row2">
+            <div class="field"><label for="addPageTpl">Neue Seite</label>
+              <select id="addPageTpl">
+                <option value="blank">Leere Seite</option>
+                <option value="landing">Landingpage (Kampagne)</option>
+                <option value="about">Über uns</option>
+                <option value="services">Leistungen</option>
+                <option value="projects">Projekte</option>
+                <option value="events">Termine</option>
+                <option value="donate">Spenden</option>
+                <option value="contact">Kontakt</option>
+                <option value="faq">Häufige Fragen</option>
+                <option value="impressum">Impressum</option>
+                <option value="datenschutz">Datenschutz</option>
+              </select></div>
+            <div class="field"><label for="addPageName">Titel</label><input id="addPageName" placeholder="z. B. Angebote"></div>
+          </div>
+          <button type="button" class="btn" id="addPage">Seite hinzufügen</button>
+        </div>
+        <div class="group" id="pageSettings"></div>
+        <div class="group">
+          <h2>Abschnitte</h2>
+          <div id="sections" class="sections"></div>
+          <div class="add-sec">
+            <label class="sr" for="addSecType">Abschnittstyp</label>
+            <select id="addSecType"></select>
+            <button type="button" class="btn" id="addSec">Abschnitt hinzufügen</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- KI -->
+      <section class="panel" data-panel="ki" hidden>
+        <div class="group">
+          <h2>Website mit Claude erstellen</h2>
+          <p class="hint" id="aiOff" hidden>Die KI-Funktionen laufen, wenn der Baukasten in Claude geöffnet ist. Außerhalb kannst du Projekte aus Vorlagen anlegen und alles von Hand bearbeiten.</p>
+          <div class="field"><label for="aiPrompt">Beschreibe die Website</label>
+            <textarea id="aiPrompt" rows="8" placeholder="Wer seid ihr, was bietet ihr an, für wen? Welche Seiten braucht ihr? Welcher Ton?&#10;&#10;Beispiel: Wir sind ein Verein der afrikanischen Community in Dortmund. Wir brauchen eine Startseite, Projekte (laufend und abgeschlossen), Spenden, Mitmachen, Termine und Kontakt. Ton: herzlich, klar, mehrsprachige Grüße."></textarea></div>
+          <div class="field"><label for="aiMode">Was soll passieren?</label>
+            <select id="aiMode">
+              <option value="site">Komplette Website neu schreiben (ersetzt alle Seiten)</option>
+              <option value="page">Eine neue Seite hinzufügen</option>
+              <option value="landing">Eine neue Landingpage hinzufügen</option>
+            </select></div>
+          <div class="btn-row">
+            <button type="button" class="btn primary" id="aiRun">Mit Claude erstellen</button>
+            <button type="button" class="btn ghost" id="aiStop" hidden>Stopp</button>
+          </div>
+          <div class="confirm" id="aiConfirm" hidden>
+            <p>Alle bisherigen Seiten werden ersetzt. Bilder und Logo bleiben erhalten.</p>
+            <div class="btn-row"><button type="button" class="btn danger" id="aiConfirmYes">Ersetzen</button><button type="button" class="btn ghost" id="aiConfirmNo">Abbrechen</button></div>
+          </div>
+          <p class="ai-status" id="aiStatus" aria-live="polite"></p>
+        </div>
+        <div class="group">
+          <h2>So arbeitet die KI</h2>
+          <p class="hint">Claude schreibt Seiten, Abschnitte und Texte im Stil deiner Beschreibung. Fehlende Fakten wie Adressen, Preise oder Namen erfindet Claude nicht, dort stehen dann Platzhalter in [eckigen Klammern]. Einzelne Abschnitte kannst du im Tab „Seiten“ mit „Mit Claude umschreiben“ überarbeiten.</p>
+        </div>
+      </section>
+
+      <!-- AUTOMATISIERUNG -->
+      <section class="panel" data-panel="auto" hidden>
+        <div class="group">
+          <h2>Landingpages in Serie</h2>
+          <p class="hint">Aus einer Vorlage viele Landingpages erzeugen, z. B. eine pro Stadt, Angebot oder Kampagne. Schreibe <code>{{spalte}}</code> in die Texte der Vorlage, das wird pro Zeile ersetzt.</p>
+          <div class="field"><label for="serTpl">Vorlage</label><select id="serTpl"></select></div>
+          <div class="field"><label for="serData">Daten (erste Zeile = Spalten, getrennt mit ;)</label>
+            <textarea id="serData" rows="6" class="mono">stadt;angebot
+Dortmund;Hausaufgabenhilfe
+Bochum;Hausaufgabenhilfe
+Essen;Hausaufgabenhilfe</textarea></div>
+          <div class="row2">
+            <div class="field"><label for="serTitle">Seitentitel</label><input id="serTitle" class="mono" value="{{angebot}} in {{stadt}}"></div>
+            <div class="field"><label for="serSlug">Dateiname</label><input id="serSlug" class="mono" value="{{angebot}}-{{stadt}}"></div>
+          </div>
+          <label class="check"><input type="checkbox" id="serNav"> In das Menü aufnehmen</label>
+          <label class="check"><input type="checkbox" id="serAI"> Texte pro Seite mit Claude individualisieren</label>
+          <div class="btn-row">
+            <button type="button" class="btn primary" id="serRun">Landingpages erzeugen</button>
+            <button type="button" class="btn ghost" id="serStop" hidden>Stopp</button>
+          </div>
+          <p class="ai-status" id="serStatus" aria-live="polite"></p>
+        </div>
+        <div class="group">
+          <h2>Formulare verbinden</h2>
+          <p class="hint">Trage einen Formular-Dienst ein (z. B. Formspree, Getform oder ein eigenes Skript). Alle Kontakt-, Anmelde- und Newsletter-Formulare senden dann dorthin.</p>
+          <div class="field"><label for="formEndpoint">Formular-Ziel (URL)</label><input id="formEndpoint" placeholder="https://formspree.io/f/…"></div>
+          <button type="button" class="btn" id="applyForms">Auf alle Formulare anwenden</button>
+        </div>
+        <div class="group">
+          <h2>Suchmaschinen</h2>
+          <p class="hint">Füllt fehlende Seitenbeschreibungen aus den Inhalten. Beim Export entstehen automatisch <code>sitemap.xml</code> und <code>robots.txt</code>.</p>
+          <div class="btn-row">
+            <button type="button" class="btn" id="seoLocal">Beschreibungen ergänzen</button>
+            <button type="button" class="btn" id="seoAI" hidden>Mit Claude schreiben</button>
+          </div>
+          <p class="ai-status" id="seoStatus" aria-live="polite"></p>
+        </div>
+      </section>
+    </aside>
+
+    <section class="stage" aria-label="Vorschau">
+      <div class="frame" id="frameWrap" data-dev="desktop"><iframe id="pv" title="Vorschau der Website"></iframe></div>
+    </section>
+  </div>
+  <datalist id="pageSlugs"></datalist>
+  <input type="file" id="imgFile" accept="image/*" hidden>
+  <div class="toast" id="toast" role="status" hidden></div>
+</div>
