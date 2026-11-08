@@ -37,7 +37,7 @@ body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 v
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--hero); }
 img { max-width: 100%; }
 [hidden] { display: none !important; }
-h1, h2, h3 { font-family: var(--font-display); line-height: 1.12; text-wrap: balance; margin: 0; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.12; text-wrap: balance; margin: 0; hyphens: auto; overflow-wrap: break-word; }
 h1 { font-size: clamp(2.1rem, 5.2vw, 3.7rem); font-weight: 800; letter-spacing: -0.02em; }
 h2 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 700; letter-spacing: -0.01em; }
 h3 { font-size: 1.22rem; font-weight: 700; }
@@ -308,3 +308,46 @@ footer p { opacity: .8; font-size: .95rem; }
 .legal { border-top: 1px solid color-mix(in srgb, var(--hero-fg) 15%, transparent); }
 .legal .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: 1rem; font-size: .85rem; opacity: .75; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Themenschwerpunkte */
+.themes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+.theme { background: var(--surface); border: 1px solid var(--line); border-top: 5px solid var(--green); border-radius: 14px; padding: 1.4rem; display: grid; gap: .55rem; align-content: start; text-decoration: none; color: var(--ink); transition: transform .15s ease, box-shadow .15s ease; min-width: 0; }
+.theme:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgb(0 0 0 / .08); }
+.theme:nth-child(3n+3) { border-top-color: var(--saffron); }
+.theme:nth-child(3n+1):not(.feature) { border-top-color: var(--clay); }
+.theme p { color: var(--muted); }
+.theme.feature { grid-column: 1 / -1; grid-template-columns: minmax(0, 1fr) auto; gap: 2.5rem; align-items: center; border-top-color: var(--clay); padding: 1.8rem; }
+.theme.feature h3 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.theme.feature .langs { color: var(--ink); }
+@media (max-width: 900px) { .themes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .themes { grid-template-columns: 1fr; } .theme.feature { grid-template-columns: 1fr; } .theme.feature .council-badge { width: 150px; } }
+.topic { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 2.5rem; padding-block: 2.6rem; border-top: 1px solid var(--line); }
+.topic .council-badge { width: 160px; margin-top: .6rem; }
+@media (max-width: 820px) { .topic { grid-template-columns: 1fr; gap: 1rem; } }
+
+/* Netzwerk-Band */
+.network { background: var(--green-soft); border-radius: 18px; padding: 2.2rem; margin-block: 1rem 3rem; }
+.network .lead { color: var(--ink); opacity: .8; }
+
+/* Partner & Mitglieder */
+.partners, .members { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+@media (max-width: 900px) { .partners, .members { grid-template-columns: 1fr; } }
+.partner, .member { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem; display: grid; gap: .55rem; align-content: start; text-decoration: none; color: var(--ink); min-width: 0; }
+.partner p, .member p { color: var(--muted); }
+.plogo { height: 72px; display: flex; align-items: center; }
+.plogo img { max-height: 72px; width: auto; background: #FFFFFF; border-radius: 8px; padding: 4px 8px; }
+.pmark { font: 800 1.6rem/1 var(--font-display); color: var(--green); border: 2px solid var(--green); border-radius: 8px; padding: .5rem .8rem; }
+.partner h3, .member h3 { font-size: 1.08rem; }
+
+/* Koordination */
+.roles { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+.person .role { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--clay); margin-top: .4rem; }
+.person .tbd { color: var(--muted); font-weight: 600; }
+.person .empty { font-size: .92rem; }
+.vertretung .person { gap: .35rem; }
+.vertretung .avatar { max-width: 180px; }
+.timeline strong { color: var(--ink); }
+.theme.join { background: var(--hero); color: var(--hero-fg); border-color: var(--hero); border-top-color: var(--saffron); }
+.theme.join p { color: color-mix(in srgb, var(--hero-fg) 78%, transparent); }
+.theme.join .more { color: var(--saffron); }
+.avatar svg { opacity: .55; }

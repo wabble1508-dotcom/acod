@@ -66,21 +66,78 @@ PROJEKTE = [
 ]
 
 NEWS = [
-    ("Oktober 2026", "Verein", "Unsere neue Website ist online", "Hier finden Sie ab sofort unsere Projekte, unser Engagement im Integrationsrat und alle Wege, wie Sie mitmachen und spenden können."),
+    ("Oktober 2026", "Verein", "Unsere neue Website ist online", "Hier finden Sie ab sofort unsere Themenschwerpunkte, Projekte, unser politisches Engagement und alle Wege, wie Sie mitmachen und spenden können."),
+    ("17. Dezember 2025", "Politik", "Der neue ACI nimmt seine Arbeit auf", "Der Ausschuss für Chancengerechtigkeit und Integration der Stadt Dortmund hat sich konstituiert. Für ACoD ist Biraan S. N. Bah stimmberechtigtes Mitglied."),
+    ("14. September 2025", "Politik", "Wahl zum Ausschuss für Chancengerechtigkeit und Integration", "Dortmund hat den ACI gewählt, die politische Vertretung der Menschen mit Einwanderungsgeschichte. ACoD ist mit Biraan S. N. Bah vertreten."),
     ("13. September 2020", "Integrationsrat", "ACoD tritt als Liste 4 an", "Bei der Integrationsratswahl der Stadt Dortmund kandidiert ACoD als Wahlliste der Afrikanischen Community: „Wir sind eine Gemeinschaft!“"),
+]
+
+# ---------------------------------------------------------------- Themenschwerpunkte
+# Politisches Engagement steht immer zuerst und hat eine eigene Seite.
+THEMEN = [
+    {"id": "politik", "t": "Politisches Engagement", "href": "politisches-engagement.html",
+     "kurz": "Unsere Stimme in der Dortmunder Stadtpolitik: 2020 als Liste 4 im Integrationsrat, seit 2025 stimmberechtigt im Ausschuss für Chancengerechtigkeit und Integration.",
+     "text": "ACoD ist als Wahlliste der Afrikanischen Community entstanden. Wir bringen die Anliegen afrikanischer Familien dorthin, wo in Dortmund über Integration und Teilhabe entschieden wird.",
+     "punkte": ["Vertretung im Ausschuss für Chancengerechtigkeit und Integration (ACI)", "Anliegen der Community in Rat und Verwaltung einbringen", "Wahlaufrufe und Informationen in vielen Sprachen", "Haltung gegen Rassismus und Diskriminierung"]},
+    {"id": "beraten", "t": "Beraten & begleiten", "projekt": "willkommenslotsen",
+     "kurz": "Hilfe bei Behördengängen, Schule, Ausbildung und Wohnungssuche, in Deutsch, Englisch, Französisch und weiteren Sprachen.",
+     "text": "Wer neu in Dortmund ist, steht vor Formularen, Terminen und Fristen in einer fremden Sprache. Erfahrene Mitglieder der Community helfen und begleiten.",
+     "punkte": ["Begleitung zu Behörden, Jobcenter, Arztpraxen und Schulen", "Übersetzen und Erklären in vielen Sprachen", "Weitervermittlung an passende Beratungsstellen"]},
+    {"id": "bildung", "t": "Bildung & Jugend", "projekt": "lernbruecke",
+     "kurz": "Hausaufgabenhilfe und Lesepatenschaften, damit junge Menschen ihre Wege in Dortmund selbstbewusst gehen.",
+     "text": "Kinder und Jugendliche aus afrikanischen Familien sollen in Schule und Ausbildung die gleichen Chancen haben wie alle anderen.",
+     "punkte": ["Hausaufgabenhilfe und Lesepatenschaften", "Vorbilder aus der Community", "Informationen für Eltern zum Schulsystem"]},
+    {"id": "kultur", "t": "Kultur & Begegnung", "projekt": "kultur-begegnung",
+     "kurz": "Feste, Kochabende und Gespräche, die afrikanische Kulturen in der Stadt sichtbar machen und Nachbarschaft stiften.",
+     "text": "Afrikanische Kulturen sind in Dortmund vielfältig vertreten. Begegnung baut Vorurteile ab und schafft Nachbarschaft.",
+     "punkte": ["Feste mit Musik, Tanz und Essen", "Offene Treffen und Kochabende", "Gespräche über Zusammenleben und Teilhabe"]},
+    {"id": "sport", "t": "Sport",
+     "kurz": "Sport verbindet: gemeinsame Bewegung, Teamgeist und Begegnung, besonders für Kinder und Jugendliche.",
+     "text": "Auf dem Platz zählt das Team, nicht die Herkunft. Sport bringt Menschen zusammen, die sich im Alltag selten begegnen.",
+     "punkte": ["Gemeinsame Sportangebote und Turniere", "Kontakte zu Dortmunder Sportvereinen", "Fairness und Teamgeist als Werte"]},
+    {"id": "integration", "t": "Nachhaltige Integration & Bildung",
+     "kurz": "Integration, die bleibt: Sprache, Anerkennung von Abschlüssen, Ausbildung, Arbeit und demokratische Teilhabe.",
+     "text": "Ankommen ist der Anfang. Damit Integration nachhaltig gelingt, braucht es Bildung, Arbeit und die Möglichkeit, mitzureden.",
+     "punkte": ["Sprache und Weiterbildung fördern", "Anerkennung ausländischer Abschlüsse unterstützen", "Wege in Ausbildung und Arbeit öffnen", "Demokratiebildung und Mitbestimmung"]},
+]
+
+# ---------------------------------------------------------------- Koordination
+# Keine Geschäftsführung: ACoD wird ehrenamtlich koordiniert.
+# Foto: Datei nach docs/assets/img/team/ legen und Dateinamen eintragen.
+KOORDINATION = [
+    {"rolle": "Sprecher/in", "name": "", "foto": "", "text": "Vertritt ACoD nach außen und führt die Koordination."},
+    {"rolle": "Stellvertretende/r Sprecher/in", "name": "", "foto": "", "text": "Unterstützt und vertritt die Sprecherin oder den Sprecher."},
+    {"rolle": "Politischer Vertreter", "name": "Biraan S. N. Bah", "foto": "", "text": "Stimmberechtigtes Mitglied im Ausschuss für Chancengerechtigkeit und Integration (ACI) der Stadt Dortmund."},
+    {"rolle": "Kulturbeauftragte/r", "name": "", "foto": "", "text": "Plant Feste, Begegnungen und kulturelle Angebote."},
+    {"rolle": "IT & Support", "name": "", "foto": "", "text": "Kümmert sich um Website, Social Media und digitale Werkzeuge."},
+]
+
+# ---------------------------------------------------------------- Mitgliedsorganisationen
+# ACoD ist ein Netzwerk. Einträge: ("Name", "https://website-oder-facebook", "kurze Beschreibung")
+MITGLIEDER = [
+]
+
+# ---------------------------------------------------------------- Partner
+PARTNER = [
+    {"name": "FreiwilligenAgentur Dortmund", "url": "https://www.freiwilligenagenturdortmund.de/", "logo": "assets/img/partner-freiwilligenagentur-dortmund.png",
+     "text": "Vermittelt seit 2002 zwischen Menschen, die sich engagieren möchten, und Organisationen, die Freiwillige suchen."},
+    {"name": "Ausschuss für Chancengerechtigkeit und Integration (ACI)", "kurz": "ACI", "url": "https://www.dortmund.de/rathaus-und-verwaltung/lokalpolitik/rat-ausschuesse-beiraete-und-bezirksvertretungen/ausschuesse/ausschuss-fuer-chancengerechtigkeit-und-integration/", "logo": "",
+     "text": "Vertritt die Interessen der Menschen mit Einwanderungsgeschichte in Dortmund und berät Rat und Verwaltung der Stadt."},
+    {"name": "Kommunales Integrationszentrum Dortmund (MIA-DO-KI)", "kurz": "MIA-DO-KI", "url": "https://www.dortmund.de/rathaus/verwaltung/amt-fuer-angelegenheiten-des-oberbuergermeisters-und-des-rates/kommunales-integrationszentrum-dortmund-mia-do-ki/", "logo": "",
+     "text": "Plant und fördert Integration in Dortmund gemeinsam mit Politik, Verwaltung, Vereinen und Migrantenorganisationen."},
 ]
 
 # ---------------------------------------------------------------- Navigation
 NAV = [
     ("index.html", "Start", []),
-    ("ueber-uns.html", "Über uns", []),
-    ("integrationsrat.html", "Integrationsrat", []),
+    ("ueber-uns.html", "Über ACoD", [("ueber-uns.html", "Wer wir sind"), ("mitglieder.html", "Mitgliedsorganisationen"), ("koordination.html", "Koordination"), ("partner.html", "Partner")]),
+    ("was-wir-tun.html", "Was wir tun", [(t.get("href") or f"was-wir-tun.html#{t['id']}", t["t"]) for t in THEMEN]),
     ("projekte.html", "Projekte", [("projekte.html#laufend", "Laufende Projekte"), ("projekte.html#abgeschlossen", "Abgeschlossene Projekte")]),
     ("aktuelles.html", "Aktuelles", [("aktuelles.html", "Neuigkeiten & Termine"), ("galerie.html", "Bilder & Videos")]),
     ("mitmachen.html", "Mitmachen", []),
     ("kontakt.html", "Kontakt", []),
 ]
-SECTION_OF = {"galerie.html": "aktuelles.html"}
+SECTION_OF = {"galerie.html": "aktuelles.html", "mitglieder.html": "ueber-uns.html", "koordination.html": "ueber-uns.html", "partner.html": "ueber-uns.html", "politisches-engagement.html": "was-wir-tun.html"}
 SECTION_OF.update({f"projekt-{p['slug']}.html": "projekte.html" for p in PROJEKTE})
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap">'
@@ -139,7 +196,7 @@ def footer():
       <p>{contact_lines()}</p>
       <p>„Wir sind eine Gemeinschaft!“</p>
     </div>
-    <div><h3>Verein</h3><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="integrationsrat.html">Integrationsrat</a></li><li><a href="aktuelles.html">Aktuelles</a></li><li><a href="galerie.html">Bilder &amp; Videos</a></li></ul></div>
+    <div><h3>Über ACoD</h3><ul><li><a href="ueber-uns.html">Wer wir sind</a></li><li><a href="mitglieder.html">Mitgliedsorganisationen</a></li><li><a href="koordination.html">Koordination</a></li><li><a href="partner.html">Partner</a></li><li><a href="politisches-engagement.html">Politisches Engagement</a></li></ul></div>
     <div><h3>Projekte</h3><ul><li><a href="projekte.html#laufend">Laufende Projekte</a></li><li><a href="projekte.html#abgeschlossen">Abgeschlossene Projekte</a></li>{"".join(f'<li><a href="projekt-{p["slug"]}.html">{e(p["t"])}</a></li>' for p in PROJEKTE if p["s"] == "laufend")}</ul></div>
     <div><h3>Unterstützen</h3><ul><li><a href="spenden.html">Spenden</a></li><li><a href="mitmachen.html">Mitmachen</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="{VEREIN['facebook']}" {EXT}>Facebook</a></li></ul></div>
   </div>
@@ -202,10 +259,52 @@ def write_box(text="Schreiben Sie uns eine Nachricht über Facebook. Wir antwort
 LANGS = 'Geh wählen! · Vote! · Allez voter! · <span lang="ar" dir="rtl">تعالوا و انتخبوا</span>'
 
 
+def theme_href(t):
+    return t.get("href") or f"was-wir-tun.html#{t['id']}"
+
+
+def themes_grid():
+    """Politisches Engagement als breite Karte mit Liste-4-Abzeichen, danach die übrigen Schwerpunkte."""
+    pol, rest = THEMEN[0], THEMEN[1:]
+    feature = f'''<a class="theme feature" href="{theme_href(pol)}">
+    <div class="stack" style="gap:.6rem">
+      <p class="eyebrow">Politische Teilhabe</p>
+      <h3>{e(pol["t"])}</h3>
+      <p>ACoD ist als Wahlliste der Afrikanischen Community angetreten, als <b>Liste 4</b> bei der Integrationsratswahl am 13. September 2020. Seit 2025 sind wir mit Biraan S. N. Bah stimmberechtigt im Ausschuss für Chancengerechtigkeit und Integration (ACI) vertreten. Wir bringen die Anliegen afrikanischer Familien dorthin, wo in Dortmund über Integration entschieden wird.</p>
+      <p class="langs" lang="mul">{LANGS}</p>
+      <span class="more">Mehr zum politischen Engagement →</span>
+    </div>
+    <span class="council-badge" aria-hidden="true"><span>Liste</span><b>4</b><small>Integrationsratswahl 2020</small></span>
+  </a>'''
+    cards = "".join(f'<a class="theme" href="{theme_href(t)}"><h3>{e(t["t"])}</h3><p>{e(t["kurz"])}</p><span class="more">Mehr erfahren →</span></a>' for t in rest)
+    join = '<a class="theme join" href="mitmachen.html"><h3>Mitmachen</h3><p>In jedem Schwerpunkt freuen wir uns über Menschen, die mit anpacken.</p><span class="more">So machen Sie mit →</span></a>'
+    return f'<div class="themes">{feature}{cards}{join}</div>'
+
+
+SILHOUETTE = '<svg viewBox="0 0 64 64" width="46%" fill="currentColor" aria-hidden="true"><circle cx="32" cy="22" r="12"/><path d="M8 60c0-14 11-22 24-22s24 8 24 22z"/></svg>'
+
+
+def initials(name):
+    w = [x for x in name.split() if x[0].isalpha()]
+    return (w[0][0] + w[-1][0]).upper() if len(w) > 1 else name[:2].upper()
+
+
+def person_card(p):
+    pic = f'<img class="avatar" src="assets/img/team/{e(p["foto"])}" alt="{e(p["name"])}" style="object-fit:cover">' if p.get("foto") else \
+        f'<div class="avatar" aria-hidden="true">{e(initials(p["name"])) if p["name"] else SILHOUETTE}</div>'
+    name = f'<b>{e(p["name"])}</b>' if p["name"] else '<b class="tbd">Wird in Kürze vorgestellt</b>'
+    return f'<div class="person">{pic}<span class="role">{e(p["rolle"])}</span>{name}<p class="empty">{e(p["text"])}</p></div>'
+
+
+def partner_card(p):
+    mark = f'<img src="{p["logo"]}" alt="{e(p["name"])}">' if p.get("logo") else f'<span class="pmark">{e(p.get("kurz") or p["name"])}</span>'
+    return f'''<a class="partner" href="{p["url"]}" {EXT}><div class="plogo">{mark}</div><h3>{e(p["name"])}</h3><p>{e(p["text"])}</p><span class="more">Website ansehen ↗</span></a>'''
+
+
 # ---------------------------------------------------------------- Seiten
 def build():
     OUT.mkdir(exist_ok=True)
-    for old in ["vorstand.html", "transparenz.html", "termine.html", "projekt-afrika-tag.html", "projekt-frauen-staerken.html", "projekt-corona-hilfe.html", "projekt-fussball-verbindet.html"]:
+    for old in ["vorstand.html", "transparenz.html", "termine.html", "projekt-afrika-tag.html", "projekt-frauen-staerken.html", "projekt-corona-hilfe.html", "projekt-fussball-verbindet.html", "integrationsrat.html"]:
         (OUT / old).unlink(missing_ok=True)
     laufend = [p for p in PROJEKTE if p["s"] == "laufend"]
     abgeschlossen = [p for p in PROJEKTE if p["s"] == "abgeschlossen"]
@@ -224,22 +323,16 @@ def build():
   </figure>
 </div></div>
 <div class="wrap">
-  <div class="section council">
-    <div class="stack">
-      <p class="eyebrow">Politische Teilhabe</p>
-      <h2>Unsere Stimme im Integrationsrat der Stadt Dortmund</h2>
-      <p class="lead">ACoD ist als Wahlliste der Afrikanischen Community angetreten, als <b>Liste 4</b> bei der Integrationsratswahl am 13. September 2020. Wir bringen die Anliegen afrikanischer Familien dorthin, wo in Dortmund über Integration gesprochen wird.</p>
-      <p class="langs" lang="mul">{LANGS}</p>
-      <div><a class="btn btn-green" href="integrationsrat.html">Mehr zum Integrationsrat</a></div>
-    </div>
-    <a class="council-badge" href="integrationsrat.html" aria-label="Liste 4 bei der Integrationsratswahl 2020"><span>Liste</span><b>4</b><small>Integrationsratswahl 2020</small></a>
-  </div>
   <div class="section">
-    <p class="eyebrow">Was wir tun</p>
-    <div class="pillars">
-      <div class="pillar"><h3>Beraten &amp; begleiten</h3><p>Hilfe bei Behördengängen, Schule, Ausbildung und Wohnungssuche, in Deutsch, Englisch, Französisch und weiteren Sprachen.</p></div>
-      <div class="pillar"><h3>Bildung &amp; Jugend</h3><p>Hausaufgabenhilfe und Lesepatenschaften, damit junge Menschen ihre Wege in Dortmund selbstbewusst gehen.</p></div>
-      <div class="pillar"><h3>Kultur &amp; Begegnung</h3><p>Feste, Kochabende und Gespräche, die afrikanische Kulturen in der Stadt sichtbar machen und Nachbarschaft stiften.</p></div>
+    <div class="section-head"><div class="stack" style="gap:.3rem"><p class="eyebrow">Was wir tun</p><h2>Unsere Themenschwerpunkte</h2></div><a class="btn btn-ghost" href="was-wir-tun.html">Alle Schwerpunkte</a></div>
+    {themes_grid()}
+  </div>
+  <div class="section network">
+    <div class="stack">
+      <p class="eyebrow">Ein Netzwerk</p>
+      <h2>ACoD verbindet Organisationen der afrikanischen Community</h2>
+      <p class="lead">Unter dem Dach von ACoD arbeiten mehrere Vereine und Initiativen zusammen. Gemeinsam sind wir eine Stimme für die afrikanische Community in Dortmund.</p>
+      <div class="hero-actions" style="margin-top:.2rem"><a class="btn btn-green" href="mitglieder.html">Mitgliedsorganisationen</a><a class="btn btn-ghost" href="koordination.html" style="color:var(--green)">Koordination</a></div>
     </div>
   </div>
   <div class="section">
@@ -259,19 +352,25 @@ def build():
   <div class="stack"><div class="section-head"><p class="eyebrow">Aktuelles</p><a href="aktuelles.html">Alle Neuigkeiten →</a></div><div class="news">{news_html(NEWS)}</div></div>
   <div class="stack"><p class="eyebrow">Bilder</p><figure class="flyer"><img src="assets/img/flyer-integrationsratswahl-2020.jpg" alt="Wahlplakat von ACoD zur Integrationsratswahl 2020, Liste 4" width="960" height="448" loading="lazy"><figcaption>Unser Wahlaufruf 2020. Mehr Fotos und Videos auf <a href="{FB_PHOTOS}" {EXT}>Facebook</a>.</figcaption></figure></div>
 </div></div>
+<div class="wrap"><div class="section">
+  <div class="section-head"><div class="stack" style="gap:.3rem"><p class="eyebrow">Partner</p><h2>Gemeinsam für Dortmund</h2></div><a class="btn btn-ghost" href="partner.html">Alle Partner</a></div>
+  <div class="partners">{"".join(partner_card(p) for p in PARTNER)}</div>
+</div></div>
 {cta("Mitmachen statt zuschauen", "Ob als Mitglied, Lesepatin oder Helfer bei Festen: Bei uns ist Platz für alle, die Dortmund gemeinsam gestalten wollen.", "mitmachen.html", "So machen Sie mit")}''',
-         "ACoD – Afrikanische Community in Dortmund: Beratung, Bildung, Begegnung und politische Teilhabe für Menschen afrikanischer Herkunft.")
+         "ACoD – Afrikanische Community in Dortmund: Netzwerk für politisches Engagement, Beratung, Bildung, Kultur, Sport und nachhaltige Integration.")
 
-    # Über uns
-    page("ueber-uns.html", "Über uns", page_head("Über uns", "Eine Community, viele Herkunftsländer, eine Stadt.",
-         "ACoD ist die Gemeinschaft von Menschen afrikanischer Herkunft in Dortmund und allen, die mit ihnen zusammenleben.",
-         [("index.html", "Start"), (None, "Über uns")]) + f'''
+    # Über ACoD
+    page("ueber-uns.html", "Über ACoD", page_head("Über ACoD", "Eine Community, viele Organisationen, eine Stimme.",
+         "ACoD ist das Netzwerk der afrikanischen Community in Dortmund: Mitgliedsorganisationen, Engagierte und alle, die mit ihnen zusammenleben.",
+         [("index.html", "Start"), (None, "Über ACoD")]) + f'''
 <div class="wrap">
   <div class="section two-col">
     <div class="prose">
       <h2>Wer wir sind</h2>
-      <p>ACoD ist 2020 als Wahlliste der Afrikanischen Community zur Integrationsratswahl in Dortmund angetreten. Aus dieser gemeinsamen Kandidatur ist eine Gemeinschaft entstanden: von Menschen, die in Dortmund leben und ihre Erfahrungen weitergeben wollen.</p>
+      <p>ACoD ist 2020 als Wahlliste der Afrikanischen Community zur Integrationsratswahl in Dortmund angetreten. Aus dieser gemeinsamen Kandidatur ist ein Netzwerk entstanden: Mehrere Vereine und Initiativen der afrikanischen Community haben sich unter dem Dach von ACoD zusammengeschlossen.</p>
       <p>Unser Ziel ist eine Stadtgesellschaft, in der Menschen afrikanischer Herkunft gleichberechtigt teilhaben, mitreden und mitgestalten. Dafür bringen wir uns in die Stadtpolitik ein, unterstützen Familien im Alltag und schaffen Orte der Begegnung.</p>
+      <h2>So sind wir organisiert</h2>
+      <p>ACoD hat keine Geschäftsführung. Die Arbeit wird ehrenamtlich von einem Koordinationsteam getragen: Sprecher, stellvertretender Sprecher, politischer Vertreter, Kulturbeauftragter sowie IT &amp; Support.</p>
       <h2>Unsere Werte</h2>
       <div class="values"><span>Gemeinschaft</span><span>Teilhabe</span><span>Respekt</span><span>Solidarität</span><span>Bildung</span></div>
     </div>
@@ -279,34 +378,106 @@ def build():
       <figure class="flyer"><img src="assets/img/gruppenfoto-2020.jpg" alt="Gruppenfoto der ACoD-Mitglieder 2020" width="785" height="278"><figcaption>Das Team von ACoD zur Integrationsratswahl 2020</figcaption></figure>
       <h2>Unser Weg</h2>
       <ol class="timeline">
-        <li><b>2020</b><p>ACoD tritt als Liste 4 zur Integrationsratswahl am 13. September an, unter dem Motto „Wir sind eine Gemeinschaft!“.</p></li>
-        <li><b>Heute</b><p>Wir begleiten Familien, fördern Kinder und Jugendliche und machen afrikanische Kulturen in Dortmund sichtbar.</p></li>
+        <li><b>13. September 2020</b><p><strong>ACoD tritt als Liste 4 an.</strong> Bei der Integrationsratswahl der Stadt Dortmund kandidiert ACoD als Wahlliste der Afrikanischen Community: „Wir sind eine Gemeinschaft!“</p></li>
+        <li><b>14. September 2025</b><p><strong>Neue Wahlperiode im ACI.</strong> Bei der Wahl zum Ausschuss für Chancengerechtigkeit und Integration der Stadt Dortmund wird ACoD-Mitglied Biraan S. N. Bah stimmberechtigtes Mitglied.</p></li>
+        <li><b>17. Dezember 2025</b><p><strong>Der ACI nimmt seine Arbeit auf.</strong> ACoD bringt die Anliegen der afrikanischen Community direkt in den Ausschuss ein.</p></li>
+        <li><b>Heute</b><p>Als Netzwerk mehrerer Organisationen engagieren wir uns in Politik, Beratung, Bildung, Kultur, Sport und für nachhaltige Integration.</p></li>
       </ol>
     </div>
   </div>
   <div class="section">
     <h2>Mehr über ACoD</h2>
     <div class="cards3">
-      <a class="card" href="integrationsrat.html" style="text-decoration:none;color:inherit"><h3>Integrationsrat</h3><p>Unsere Stimme in der Dortmunder Stadtpolitik.</p><span class="more">Ansehen →</span></a>
-      <a class="card" href="projekte.html" style="text-decoration:none;color:inherit"><h3>Projekte</h3><p>Was gerade läuft und was wir schon geschafft haben.</p><span class="more">Ansehen →</span></a>
-      <a class="card" href="mitmachen.html" style="text-decoration:none;color:inherit"><h3>Mitmachen</h3><p>Mitglied werden, helfen oder kooperieren.</p><span class="more">Ansehen →</span></a>
+      <a class="card" href="mitglieder.html" style="text-decoration:none;color:inherit"><h3>Mitgliedsorganisationen</h3><p>Die Vereine und Initiativen, die ACoD tragen.</p><span class="more">Ansehen →</span></a>
+      <a class="card" href="koordination.html" style="text-decoration:none;color:inherit"><h3>Koordination</h3><p>Die Menschen, die ACoD ehrenamtlich koordinieren und vertreten.</p><span class="more">Ansehen →</span></a>
+      <a class="card" href="partner.html" style="text-decoration:none;color:inherit"><h3>Partner</h3><p>Mit wem wir in Dortmund zusammenarbeiten.</p><span class="more">Ansehen →</span></a>
     </div>
   </div>
-</div>''', "Über ACoD – Afrikanische Community in Dortmund: wer wir sind, unsere Werte und unser Weg seit 2020.")
+</div>''', "Über ACoD – Afrikanische Community in Dortmund: ein Netzwerk von Organisationen, unsere Werte und unser Weg seit 2020.")
 
-    # Integrationsrat
-    page("integrationsrat.html", "Integrationsrat", page_head("Politische Teilhabe", "ACoD im Integrationsrat der Stadt Dortmund",
-         "Die Wahlliste der Afrikanischen Community in Dortmund: Wir sind eine Gemeinschaft!",
-         [("index.html", "Start"), (None, "Integrationsrat")]) + f'''
+    # Mitgliedsorganisationen
+    if MITGLIEDER:
+        liste = '<div class="members">' + "".join(
+            f'<a class="member" href="{e(u)}" {EXT}><h3>{e(n)}</h3><p>{e(d)}</p><span class="more">Website ansehen ↗</span></a>' if u else
+            f'<div class="member"><h3>{e(n)}</h3><p>{e(d)}</p></div>' for n, u, d in MITGLIEDER) + "</div>"
+        zahl = f'<p class="lead">{len(MITGLIEDER)} Organisationen arbeiten unter dem Dach von ACoD zusammen.</p>'
+    else:
+        liste = '<div class="box"><h3>Unsere Mitglieder stellen sich vor</h3><p class="empty">Die Übersicht unserer Mitgliedsorganisationen mit Links zu ihren Seiten wird gerade zusammengestellt.</p></div>'
+        zahl = ""
+    page("mitglieder.html", "Mitgliedsorganisationen", page_head("Über ACoD", "Mitgliedsorganisationen",
+         "ACoD ist ein Netzwerk: Vereine und Initiativen der afrikanischen Community in Dortmund arbeiten unter einem Dach zusammen.",
+         [("index.html", "Start"), ("ueber-uns.html", "Über ACoD"), (None, "Mitgliedsorganisationen")]) + f'''
 <div class="wrap">
-  <div class="section">
-    <figure class="flyer"><img src="assets/img/flyer-integrationsratswahl-2020.jpg" alt="Wahlplakat: ACoD im Integrationsrat der Stadt Dortmund, die Wahlliste der Afrikanischen Community in Dortmund, Liste 4, Integrationsratswahl am 13. September 2020" width="960" height="448"><figcaption>Unser Wahlaufruf zur Integrationsratswahl am 13. September 2020</figcaption></figure>
-  </div>
+  <div class="section">{zahl}{liste}</div>
   <div class="section two-col">
     <div class="prose">
-      <h2>Was ist der Integrationsrat?</h2>
-      <p>Der Integrationsrat vertritt die Interessen der Dortmunderinnen und Dortmunder mit Einwanderungsgeschichte gegenüber Rat und Verwaltung der Stadt. Er wird alle fünf Jahre zusammen mit der Kommunalwahl gewählt.</p>
-      <p>Wählen dürfen unter anderem Menschen ohne deutsche Staatsangehörigkeit, Eingebürgerte und Menschen, die die deutsche Staatsangehörigkeit als Kind ausländischer Eltern erworben haben.</p>
+      <h2>Mit Ihrer Organisation Mitglied werden</h2>
+      <p>Sie engagieren sich mit einem Verein, einer Gemeinde oder einer Initiative für die afrikanische Community in Dortmund? Werden Sie Teil des Netzwerks. Gemeinsam haben wir eine stärkere Stimme in der Stadtpolitik, teilen Wissen und planen Projekte zusammen.</p>
+      <ul class="goals"><li>Vertretung im Ausschuss für Chancengerechtigkeit und Integration</li><li>Austausch und gemeinsame Projekte</li><li>Sichtbarkeit auf dieser Website</li></ul>
+    </div>
+    {write_box("Schreiben Sie uns, welche Organisation Sie vertreten. Wir melden uns bei Ihnen.")}
+  </div>
+</div>''', "Mitgliedsorganisationen im Netzwerk ACoD – Afrikanische Community in Dortmund.")
+
+    # Koordination
+    page("koordination.html", "Koordination", page_head("Über ACoD", "Koordination",
+         "ACoD hat keine Geschäftsführung. Ein ehrenamtliches Team koordiniert das Netzwerk und vertritt es in Politik und Öffentlichkeit.",
+         [("index.html", "Start"), ("ueber-uns.html", "Über ACoD"), (None, "Koordination")]) + f'''
+<div class="wrap">
+  <div class="section"><div class="team roles">{"".join(person_card(p) for p in KOORDINATION)}</div></div>
+  <div class="section two-col">
+    <div class="prose">
+      <h2>Vertretung in der Politik</h2>
+      <p>Biraan S. N. Bah vertritt ACoD als stimmberechtigtes Mitglied im Ausschuss für Chancengerechtigkeit und Integration (ACI) der Stadt Dortmund. Dort bringt er die Anliegen der afrikanischen Community in Rat und Verwaltung ein.</p>
+      <p><a href="politisches-engagement.html">Mehr zu unserem politischen Engagement →</a></p>
+    </div>
+    {write_box("Sie möchten jemanden aus der Koordination erreichen? Schreiben Sie uns.")}
+  </div>
+</div>''', "Koordination von ACoD: Sprecher, stellvertretender Sprecher, politischer Vertreter, Kulturbeauftragter sowie IT & Support.")
+
+    # Partner
+    page("partner.html", "Partner", page_head("Über ACoD", "Unsere Partner",
+         "Mit diesen Partnern arbeiten wir in Dortmund zusammen.",
+         [("index.html", "Start"), ("ueber-uns.html", "Über ACoD"), (None, "Partner")]) + f'''
+<div class="wrap">
+  <div class="section"><div class="partners">{"".join(partner_card(p) for p in PARTNER)}</div></div>
+</div>
+{cta("Partner werden", "Schulen, Unternehmen, Vereine und Initiativen: Lassen Sie uns gemeinsam etwas für Dortmund bewegen.", VEREIN["messenger"], "Kontakt aufnehmen", ext=True)}''', "Partner von ACoD: FreiwilligenAgentur Dortmund, Ausschuss für Chancengerechtigkeit und Integration, MIA-DO-KI.")
+
+    # Was wir tun
+    def topic(t, i):
+        proj = next((p for p in PROJEKTE if p["slug"] == t.get("projekt")), None)
+        links = []
+        if t.get("href"):
+            links.append(f'<a class="btn btn-green" href="{t["href"]}">Mehr zum politischen Engagement</a>')
+        if proj:
+            links.append(f'<a class="btn btn-ghost" href="projekt-{proj["slug"]}.html" style="color:var(--green)">Projekt: {e(proj["t"])}</a>')
+        badge = '<div class="council-badge" aria-hidden="true"><span>Liste</span><b>4</b><small>Integrationsratswahl 2020</small></div>' if t["id"] == "politik" else ""
+        return f'''<section class="topic" id="{t["id"]}">
+  <div class="stack"><h2>{e(t["t"])}</h2><p class="lead">{e(t["kurz"])}</p>{badge}</div>
+  <div class="prose"><p>{e(t["text"])}</p><ul class="goals">{"".join(f"<li>{e(x)}</li>" for x in t["punkte"])}</ul>{f'<div class="hero-actions" style="margin-top:.4rem">{"".join(links)}</div>' if links else ""}</div>
+</section>'''
+    page("was-wir-tun.html", "Was wir tun", page_head("Was wir tun", "Unsere Themenschwerpunkte",
+         "Politisches Engagement, Beratung, Bildung, Kultur, Sport und nachhaltige Integration: Dafür setzt sich ACoD in Dortmund ein.",
+         [("index.html", "Start"), (None, "Was wir tun")]) + f'''
+<div class="wrap">
+  <div class="section">{themes_grid()}</div>
+  {"".join(topic(t, i) for i, t in enumerate(THEMEN))}
+</div>
+{cta("Machen Sie mit", "In jedem Schwerpunkt freuen wir uns über Unterstützung.", "mitmachen.html", "So machen Sie mit")}''', "Was ACoD tut: politisches Engagement, Beraten & begleiten, Bildung & Jugend, Kultur & Begegnung, Sport und nachhaltige Integration.")
+
+    # Politisches Engagement
+    bah = next(p for p in KOORDINATION if p["name"] == "Biraan S. N. Bah")
+    page("politisches-engagement.html", "Politisches Engagement", page_head("Was wir tun", "Politisches Engagement",
+         "Unsere Stimme in der Dortmunder Stadtpolitik: 2020 als Liste 4 im Integrationsrat, seit 2025 stimmberechtigt im Ausschuss für Chancengerechtigkeit und Integration.",
+         [("index.html", "Start"), ("was-wir-tun.html", "Was wir tun"), (None, "Politisches Engagement")]) + f'''
+<div class="wrap">
+  <div class="section two-col">
+    <div class="prose">
+      <p class="eyebrow">Seit 2025</p>
+      <h2>ACoD im Ausschuss für Chancengerechtigkeit und Integration</h2>
+      <p>Am 14. September 2025 hat Dortmund den Ausschuss für Chancengerechtigkeit und Integration (ACI) gewählt. Er vertritt die Interessen der Menschen mit Einwanderungsgeschichte, berät Rat und Verwaltung der Stadt und entscheidet über die Förderung von Integrationsprojekten. Am 17. Dezember 2025 hat er seine Arbeit aufgenommen.</p>
+      <p>ACoD ist dort mit Biraan S. N. Bah als stimmberechtigtem Mitglied vertreten.</p>
       <h2>Wofür wir uns einsetzen</h2>
       <ul class="goals">
         <li>Mehr Beratung in afrikanischen Sprachen, Englisch und Französisch bei Ämtern</li>
@@ -317,13 +488,25 @@ def build():
       </ul>
     </div>
     <aside class="stack">
-      <div class="council-badge big"><span>Liste</span><b>4</b><small>Integrationsratswahl 13.09.2020</small></div>
-      <div class="box"><h3>Geh wählen!</h3><p class="langs">{LANGS}</p><p class="empty">Unser Aufruf richtet sich an alle Wahlberechtigten, in allen Sprachen der Community.</p></div>
+      <div class="box vertretung"><p class="eyebrow">Unsere Vertretung</p>{person_card(bah)}</div>
+      <div class="box"><h3>Der ACI bei der Stadt Dortmund</h3><p class="empty">Sitzungen, Mitglieder und Förderrichtlinien des Ausschusses.</p><a class="btn btn-green" href="{PARTNER[1]["url"]}" {EXT}>Zur Seite der Stadt</a></div>
     </aside>
   </div>
+  <div class="section two-col">
+    <figure class="flyer"><img src="assets/img/flyer-integrationsratswahl-2020.jpg" alt="Wahlplakat: ACoD im Integrationsrat der Stadt Dortmund, die Wahlliste der Afrikanischen Community in Dortmund, Liste 4, Integrationsratswahl am 13. September 2020" width="960" height="448"><figcaption>Unser Wahlaufruf zur Integrationsratswahl am 13. September 2020</figcaption></figure>
+    <div class="prose">
+      <p class="eyebrow">2020</p>
+      <h2>Liste 4 bei der Integrationsratswahl</h2>
+      <p>Am 13. September 2020 ist ACoD als Wahlliste der Afrikanischen Community zur Integrationsratswahl der Stadt Dortmund angetreten, unter dem Motto „Wir sind eine Gemeinschaft!“. Damit hat die afrikanische Community zum ersten Mal mit einer eigenen Liste kandidiert.</p>
+      <p class="langs" lang="mul">{LANGS}</p>
+    </div>
+  </div>
+  <div class="section">
+    <h2>Partner in der Stadtpolitik</h2>
+    <div class="partners">{partner_card(PARTNER[1])}{partner_card(PARTNER[2])}</div>
+  </div>
 </div>
-{cta("Ihre Anliegen gehören in den Integrationsrat", "Was muss sich in Dortmund ändern? Schreiben Sie uns, wir tragen es weiter.", VEREIN["messenger"], "Anliegen schicken", ext=True)}''',
-         "ACoD als Wahlliste der Afrikanischen Community im Integrationsrat der Stadt Dortmund: Liste 4 bei der Wahl 2020.")
+{cta("Ihre Anliegen gehören in die Stadtpolitik", "Was muss sich in Dortmund ändern? Schreiben Sie uns, wir tragen es in den Ausschuss.", VEREIN["messenger"], "Anliegen schicken", ext=True)}''', "Politisches Engagement von ACoD: Liste 4 bei der Integrationsratswahl 2020, seit 2025 stimmberechtigt im Ausschuss für Chancengerechtigkeit und Integration Dortmund.")
 
     # Projekte
     page("projekte.html", "Projekte", page_head("Projekte", "Unsere Projekte",
