@@ -121,9 +121,9 @@ MITGLIEDER = [
 PARTNER = [
     {"name": "FreiwilligenAgentur Dortmund", "url": "https://www.freiwilligenagenturdortmund.de/", "logo": "assets/img/partner-freiwilligenagentur-dortmund.png",
      "text": "Vermittelt seit 2002 zwischen Menschen, die sich engagieren möchten, und Organisationen, die Freiwillige suchen."},
-    {"name": "Ausschuss für Chancengerechtigkeit und Integration (ACI)", "kurz": "ACI", "url": "https://www.dortmund.de/rathaus-und-verwaltung/lokalpolitik/rat-ausschuesse-beiraete-und-bezirksvertretungen/ausschuesse/ausschuss-fuer-chancengerechtigkeit-und-integration/", "logo": "",
+    {"name": "Ausschuss für Chancengerechtigkeit und Integration (ACI)", "kurz": "ACI", "url": "https://www.dortmund.de/rathaus-und-verwaltung/lokalpolitik/rat-ausschuesse-beiraete-und-bezirksvertretungen/ausschuesse/ausschuss-fuer-chancengerechtigkeit-und-integration/", "logo": "assets/img/partner-stadt-dortmund.svg",  # eigenes ACI-Logo ist nicht öffentlich, daher Logo der Stadt
      "text": "Vertritt die Interessen der Menschen mit Einwanderungsgeschichte in Dortmund und berät Rat und Verwaltung der Stadt."},
-    {"name": "Kommunales Integrationszentrum Dortmund (MIA-DO-KI)", "kurz": "MIA-DO-KI", "url": "https://www.dortmund.de/rathaus/verwaltung/amt-fuer-angelegenheiten-des-oberbuergermeisters-und-des-rates/kommunales-integrationszentrum-dortmund-mia-do-ki/", "logo": "",
+    {"name": "Kommunales Integrationszentrum Dortmund (MIA-DO-KI)", "kurz": "MIA-DO-KI", "url": "https://www.dortmund.de/rathaus/verwaltung/amt-fuer-angelegenheiten-des-oberbuergermeisters-und-des-rates/kommunales-integrationszentrum-dortmund-mia-do-ki/", "logo": "assets/img/partner-mia-do-ki.png",
      "text": "Plant und fördert Integration in Dortmund gemeinsam mit Politik, Verwaltung, Vereinen und Migrantenorganisationen."},
 ]
 

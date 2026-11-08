@@ -335,7 +335,7 @@ footer p { opacity: .8; font-size: .95rem; }
 .partner, .member { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem; display: grid; gap: .55rem; align-content: start; text-decoration: none; color: var(--ink); min-width: 0; }
 .partner p, .member p { color: var(--muted); }
 .plogo { height: 72px; display: flex; align-items: center; }
-.plogo img { max-height: 72px; width: auto; background: #FFFFFF; border-radius: 8px; padding: 4px 8px; }
+.plogo img { height: 60px; max-width: 100%; width: auto; object-fit: contain; background: #FFFFFF; border-radius: 8px; padding: 4px 8px; }
 .pmark { font: 800 1.6rem/1 var(--font-display); color: var(--green); border: 2px solid var(--green); border-radius: 8px; padding: .5rem .8rem; }
 .partner h3, .member h3 { font-size: 1.08rem; }
 
