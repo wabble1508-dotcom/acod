@@ -67,8 +67,8 @@ PROJEKTE = [
 
 NEWS = [
     ("Oktober 2026", "Verein", "Unsere neue Website ist online", "Hier finden Sie ab sofort unsere Themenschwerpunkte, Projekte, unser politisches Engagement und alle Wege, wie Sie mitmachen und spenden können."),
-    ("17. Dezember 2025", "Politik", "Der neue ACI nimmt seine Arbeit auf", "Der Ausschuss für Chancengerechtigkeit und Integration der Stadt Dortmund hat sich konstituiert. Für ACoD ist Biraan S. N. Bah stimmberechtigtes Mitglied."),
-    ("14. September 2025", "Politik", "Wahl zum Ausschuss für Chancengerechtigkeit und Integration", "Dortmund hat den ACI gewählt, die politische Vertretung der Menschen mit Einwanderungsgeschichte. ACoD ist mit Biraan S. N. Bah vertreten."),
+    ("17. Dezember 2025", "Politik", "Der neue ACI nimmt seine Arbeit auf", "Der Ausschuss für Chancengerechtigkeit und Integration der Stadt Dortmund hat sich konstituiert. Für ACoD ist Biraan S. N. J. Bah stimmberechtigtes Mitglied."),
+    ("14. September 2025", "Politik", "Wahl zum Ausschuss für Chancengerechtigkeit und Integration", "Dortmund hat den ACI gewählt, die politische Vertretung der Menschen mit Einwanderungsgeschichte. ACoD ist mit Biraan S. N. J. Bah vertreten."),
     ("13. September 2020", "Integrationsrat", "ACoD tritt als Liste 4 an", "Bei der Integrationsratswahl der Stadt Dortmund kandidiert ACoD als Wahlliste der Afrikanischen Community: „Wir sind eine Gemeinschaft!“"),
 ]
 
@@ -107,7 +107,7 @@ THEMEN = [
 KOORDINATION = [
     {"rolle": "Sprecher/in", "name": "", "foto": "", "text": "Vertritt ACoD nach außen und führt die Koordination."},
     {"rolle": "Stellvertretende/r Sprecher/in", "name": "", "foto": "", "text": "Unterstützt und vertritt die Sprecherin oder den Sprecher."},
-    {"rolle": "Politischer Vertreter", "name": "Biraan S. N. Bah", "foto": "", "text": "Stimmberechtigtes Mitglied im Ausschuss für Chancengerechtigkeit und Integration (ACI) der Stadt Dortmund."},
+    {"rolle": "Politischer Vertreter", "name": "Biraan S. N. J. Bah", "foto": "biraan-bah.jpg", "text": "Politischer Vertreter der Afrikanischen Community in Dortmund (ACoD) im Ausschuss für Chancengerechtigkeit und Integration (ACI) der Stadt Dortmund."},
     {"rolle": "Kulturbeauftragte/r", "name": "", "foto": "", "text": "Plant Feste, Begegnungen und kulturelle Angebote."},
     {"rolle": "IT & Support", "name": "", "foto": "", "text": "Kümmert sich um Website, Social Media und digitale Werkzeuge."},
 ]
@@ -270,7 +270,7 @@ def themes_grid():
     <div class="stack" style="gap:.6rem">
       <p class="eyebrow">Politische Teilhabe</p>
       <h3>{e(pol["t"])}</h3>
-      <p>ACoD ist als Wahlliste der Afrikanischen Community angetreten, als <b>Liste 4</b> bei der Integrationsratswahl am 13. September 2020. Seit 2025 sind wir mit Biraan S. N. Bah stimmberechtigt im Ausschuss für Chancengerechtigkeit und Integration (ACI) vertreten. Wir bringen die Anliegen afrikanischer Familien dorthin, wo in Dortmund über Integration entschieden wird.</p>
+      <p>ACoD ist als Wahlliste der Afrikanischen Community angetreten, als <b>Liste 4</b> bei der Integrationsratswahl am 13. September 2020. Seit 2025 sind wir mit Biraan S. N. J. Bah stimmberechtigt im Ausschuss für Chancengerechtigkeit und Integration (ACI) vertreten. Wir bringen die Anliegen afrikanischer Familien dorthin, wo in Dortmund über Integration entschieden wird.</p>
       <p class="langs" lang="mul">{LANGS}</p>
       <span class="more">Mehr zum politischen Engagement →</span>
     </div>
@@ -379,7 +379,7 @@ def build():
       <h2>Unser Weg</h2>
       <ol class="timeline">
         <li><b>13. September 2020</b><p><strong>ACoD tritt als Liste 4 an.</strong> Bei der Integrationsratswahl der Stadt Dortmund kandidiert ACoD als Wahlliste der Afrikanischen Community: „Wir sind eine Gemeinschaft!“</p></li>
-        <li><b>14. September 2025</b><p><strong>Neue Wahlperiode im ACI.</strong> Bei der Wahl zum Ausschuss für Chancengerechtigkeit und Integration der Stadt Dortmund wird ACoD-Mitglied Biraan S. N. Bah stimmberechtigtes Mitglied.</p></li>
+        <li><b>14. September 2025</b><p><strong>Neue Wahlperiode im ACI.</strong> Bei der Wahl zum Ausschuss für Chancengerechtigkeit und Integration der Stadt Dortmund wird ACoD-Mitglied Biraan S. N. J. Bah stimmberechtigtes Mitglied.</p></li>
         <li><b>17. Dezember 2025</b><p><strong>Der ACI nimmt seine Arbeit auf.</strong> ACoD bringt die Anliegen der afrikanischen Community direkt in den Ausschuss ein.</p></li>
         <li><b>Heute</b><p>Als Netzwerk mehrerer Organisationen engagieren wir uns in Politik, Beratung, Bildung, Kultur, Sport und für nachhaltige Integration.</p></li>
       </ol>
@@ -428,7 +428,7 @@ def build():
   <div class="section two-col">
     <div class="prose">
       <h2>Vertretung in der Politik</h2>
-      <p>Biraan S. N. Bah vertritt ACoD als stimmberechtigtes Mitglied im Ausschuss für Chancengerechtigkeit und Integration (ACI) der Stadt Dortmund. Dort bringt er die Anliegen der afrikanischen Community in Rat und Verwaltung ein.</p>
+      <p>Biraan S. N. J. Bah vertritt ACoD als stimmberechtigtes Mitglied im Ausschuss für Chancengerechtigkeit und Integration (ACI) der Stadt Dortmund. Dort bringt er die Anliegen der afrikanischen Community in Rat und Verwaltung ein.</p>
       <p><a href="politisches-engagement.html">Mehr zu unserem politischen Engagement →</a></p>
     </div>
     {write_box("Sie möchten jemanden aus der Koordination erreichen? Schreiben Sie uns.")}
@@ -467,7 +467,7 @@ def build():
 {cta("Machen Sie mit", "In jedem Schwerpunkt freuen wir uns über Unterstützung.", "mitmachen.html", "So machen Sie mit")}''', "Was ACoD tut: politisches Engagement, Beraten & begleiten, Bildung & Jugend, Kultur & Begegnung, Sport und nachhaltige Integration.")
 
     # Politisches Engagement
-    bah = next(p for p in KOORDINATION if p["name"] == "Biraan S. N. Bah")
+    bah = next(p for p in KOORDINATION if p["name"] == "Biraan S. N. J. Bah")
     page("politisches-engagement.html", "Politisches Engagement", page_head("Was wir tun", "Politisches Engagement",
          "Unsere Stimme in der Dortmunder Stadtpolitik: 2020 als Liste 4 im Integrationsrat, seit 2025 stimmberechtigt im Ausschuss für Chancengerechtigkeit und Integration.",
          [("index.html", "Start"), ("was-wir-tun.html", "Was wir tun"), (None, "Politisches Engagement")]) + f'''
@@ -477,7 +477,7 @@ def build():
       <p class="eyebrow">Seit 2025</p>
       <h2>ACoD im Ausschuss für Chancengerechtigkeit und Integration</h2>
       <p>Am 14. September 2025 hat Dortmund den Ausschuss für Chancengerechtigkeit und Integration (ACI) gewählt. Er vertritt die Interessen der Menschen mit Einwanderungsgeschichte, berät Rat und Verwaltung der Stadt und entscheidet über die Förderung von Integrationsprojekten. Am 17. Dezember 2025 hat er seine Arbeit aufgenommen.</p>
-      <p>ACoD ist dort mit Biraan S. N. Bah als stimmberechtigtem Mitglied vertreten.</p>
+      <p>ACoD ist dort mit Biraan S. N. J. Bah als stimmberechtigtem Mitglied vertreten.</p>
       <h2>Wofür wir uns einsetzen</h2>
       <ul class="goals">
         <li>Mehr Beratung in afrikanischen Sprachen, Englisch und Französisch bei Ämtern</li>
